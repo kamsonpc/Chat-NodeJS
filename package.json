@@ -1,0 +1,23 @@
+{
+  "name": "kamsonhelp",
+  "version": "1.0.0",
+  "description": "my own chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamsonpc/ithelpchat.git"
+  },
+  "author": "kamsonpc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamsonpc/ithelpchat/issues"
+  },
+  "homepage": "https://github.com/kamsonpc/ithelpchat#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
