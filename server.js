@@ -1,9 +1,13 @@
-var http = require("http");
-var fs = require('fs');
+var app = require('express')();
+var http = require('http').Server(app);
 var port = 80;
-var server = http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/html"});
-  response.end();
+app.get("/",function(req,res)
+       {
+res.sendFile(__dirname + '/index.html');    
 });
-server.listen(port);
-console.log("Server is listening");
+http.listen(port, function() {
+      console.log('Listening on *:'+port);
+});
+
+
+
