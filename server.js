@@ -1,11 +1,19 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var http = require('http').Server(app);
+var io = require("socket.io")(http);
 var port = 80;
-app.get("/",function(req,res)
-       {
-res.sendFile(__dirname + '/index.html');    
+app.use(express.static(__dirname + '/public'));
+
+io.on('connection',function(socket)
+      {
+    socket.on('chat_messange',function(msg){
+        io.emit('chat_message',msg)
+    });
+    
 });
-http.listen(port, function() {
+
+app.listen(port, function() {
       console.log('Listening on *:'+port);
 });
 

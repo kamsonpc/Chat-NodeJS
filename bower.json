@@ -1,0 +1,21 @@
+{
+  "name": "kamsonhelp",
+  "description": "my own chat",
+  "main": "server.js",
+  "authors": [
+    "kamsonpc"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kamsonpc/ithelpchat",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "socket.io": "^1.7.3"
+  }
+}
