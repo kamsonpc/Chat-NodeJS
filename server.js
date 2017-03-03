@@ -1,19 +1,18 @@
-var express = require('express');
+var express = require('express')
 var app = express();
-var http = require('http').Server(app);
-var io = require("socket.io")(http);
-var port = 80;
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+var port = 3000;
 app.use(express.static(__dirname + '/public'));
 
 io.on('connection',function(socket)
       {
-    socket.on('chat_messange',function(msg){
-        io.emit('chat_message',msg)
+    socket.on('chat message',function(msg){
+        io.emit('chat message',msg)
     });
     
 });
-
-app.listen(port, function() {
+server.listen(port, function() {
       console.log('Listening on *:'+port);
 });
 
