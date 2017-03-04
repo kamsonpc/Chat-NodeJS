@@ -1,29 +1,37 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Kamson Help</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel='stylesheet' href="css/style.css">
-	</head>
 
-	<body>
-        <div class="container">
-            <div class="row">
-                <ul id='messages'></ul>
-                <div class="col-xs-12">
-                    <form action="">
-                         <input id="message" autocomplete="off" />
-                         <button>Wyślij</button>
-                    </form>
-                </div>
+<head>
+    <title>Kamsonchat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href="css/style.css"> </head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 col-xs-12">
+                <ul id='messages' class="list-group"></ul>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 col-xs-12">
+                <form action="">
+                    <div class="form-group">
+
+                            <input class="col-xs-8" id="message" autocomplete="off" />
+                            <button class="custom-file-control  col-xs-4">Wyślij</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/chat.js"></script>
-	</body>
+</body>
+
 </html>
